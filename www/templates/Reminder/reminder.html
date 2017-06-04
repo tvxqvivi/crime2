@@ -1,0 +1,30 @@
+<ion-view title="Reminder" cache-view="false">
+
+	<ion-nav-bar class="bar-dark" align-title="center">
+	  <ion-nav-buttons side="left">
+	    <button class="button button-clear icon ion-android-arrow-back backBtn" ui-sref="home"></button>
+	  </ion-nav-buttons>
+	  <ion-nav-buttons side="right" >
+	    <button class="button button-clear" ng-click="modal.show()">Add</button>
+	  </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content>
+    
+    <div class="list list-inset">
+    	<div class="item item-positive item-divider">Pending Scheduled Reminder</div>
+    	<div ng-if="reminders == 0" class="item center"><h2>No Reminders Found</h2></div>
+   		<a class="item center reminder" ui-sref="perReminder({id : item.id})" ng-repeat="item in reminders">
+   			<div class="row" style="margin: none;">
+   				<div class="col" style="text-align: left;">
+	   				<h2>Receiver : {{ item.receiver }}</h2>
+	   				<p>Scheduled : {{ item.reminderDT }}</p>
+	   				<p>Message : {{ item.message }}</p>
+	   			</div>
+   			</div>
+   		</a>
+    </div>
+
+	</ion-content>
+	
+</ion-view>

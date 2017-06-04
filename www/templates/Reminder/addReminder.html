@@ -1,0 +1,42 @@
+<ion-modal-view>
+
+  <ion-header-bar class="bar bar-header bar-dark" align-title="center">
+    <h1 class="title">New Reminder</h1>
+    <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+  </ion-header-bar>
+
+  <ion-content scroll="true" class="padding">
+    <form name="addReminderForm" ng-submit="addReminder()">
+
+      <div class="list card">
+
+        <label class="item item-input item-stacked-label">
+          <span class="mandatory">* </span><span class="input-label">Date and Time<span class="mandatory"> (Must after current date and time)</span></span>
+          <input id="datefield" type="datetime-local" min="2017-05-20T12:00" ng-model="addreminder.date" ng-change="dateTime()" required/>
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="mandatory">* </span><span class="input-label">Message</span>
+          <textarea cols="30" rows="5" placeholder="E.g. Please call me at the specified time." ng-model="addreminder.desc"></textarea>
+        </label>
+
+        <label class="item item-input item-stacked-label" style="padding-right: 16px">
+          <span class="input-label"><span class="mandatory">* </span>Recepients :</span>
+          <div class="list card" style="margin: 10px 0px;">
+          <ion-checkbox ng-repeat="contacts in contacts" ng-model="hpnum[contacts.hpnum]" ng-change="checked()">
+            <h2>{{ contacts.name }}</h2>
+            <p>{{ contacts.hpnum }}</p>
+          </ion-checkbox>
+        </div>
+        </label>
+
+      </div>
+      <span class="mandatory">* </span><span>Please fill in the mandatory fields to proceed.</span>
+      <div class="editProBtn">
+        <button type="submit" class="button button-full button-balanced" ng-disabled="addReminderForm.$invalid">Add Reminder</button>
+      </div>
+
+    </form>
+  </ion-content>
+
+</ion-modal-view>

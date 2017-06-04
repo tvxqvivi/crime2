@@ -1,0 +1,28 @@
+<ion-modal-view>
+
+	<ion-header-bar class="bar bar-header bar-dark" align-title="center">
+	  <h1 class="title">Edit Reminder</h1>
+	  <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+	</ion-header-bar>
+
+	<ion-content class="padding">
+
+		<form name="editReminderForm" ng-submit="editReminder()">
+
+			<div class="list">
+		  	<label class="item item-input item-stacked-label">
+	        <span class="input-label">Date and Time<span class="mandatory"> (Must after current date and time)</span></span>
+	        <input id="reminderDT" type="datetime-local" ng-model="editreminder.date" ng-change="dateTime()" required/>
+	      </label>
+	      <label class="item item-input item-stacked-label">
+	        <span class="input-label">Message</span>
+	        <textarea cols="30" rows="5" placeholder="E.g. Please call me at the specified time." ng-model="editreminder.desc"></textarea>
+	      </label>
+		   	<button type="submit" class="button button-full button-positive">Edit</button>
+		  </div>
+		  
+		</form>
+	  
+	</ion-content>
+
+</ion-modal-view>

@@ -1,0 +1,85 @@
+<ion-view cache-view="false">
+
+  <ion-nav-bar class="bar-dark" align-title="center">
+    <ion-nav-buttons side="left">
+      <button class="button button-clear icon ion-android-arrow-back backBtn" ui-sref="home"></button>
+    </ion-nav-buttons>
+    <ion-nav-title class="title">Report Incident</ion-nav-title>
+  </ion-nav-bar>
+
+  <ion-content scroll="true" class="padding">
+    <form name="addWitnessForm" ng-submit="addWitness()">
+
+      <div class="list card">
+
+        <label class="item item-input item-stacked-label">
+          <span class="mandatory">* </span><span class="input-label">Date and Time</span>
+          <input type="datetime-local" ng-model="witness.date" ng-change="dateTime()" required/>
+        </label>
+
+        <div class="card" ng-if="image != null">
+          <img ng-src="{{pathForImage(image)}}" style="width: 100%; height: 100%;">
+        </div>
+        <div class="item row">
+          <div class="col"><button class="button button-royal icon icon-left ion-camera" style="width: 100%" ng-click="selectPicture()">Take Photo</button></div>
+        </div>
+
+        <div class="item">
+          <button class="button button-block button-royal icon icon-left ion-android-locate" style="margin: 0 auto;" ng-click="getLocation()">
+            Get Your Location
+          </button>
+          <p class="text-center"><span>Press this button to locate you automatically</span></p>
+        </div>
+
+        <label class="item item-input item-stacked-label">
+          <span class="mandatory">* </span><span class="input-label">Locality</span>
+          <input type="text" placeholder="E.g. Lorong ABC / The Spring Mall" ng-model="witness.route" required/>
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="mandatory">* </span><span class="input-label">City</span>
+          <input type="text" placeholder="E.g. Kuching" ng-model="witness.city" required/>
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="mandatory">* </span><span class="input-label">State</span>
+          <input type="text" placeholder="E.g. Sarawak" ng-model="witness.state" required/>
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Postal Code</span>
+          <input type="text" placeholder="E.g. 94300" ng-model="witness.postcode"/>
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Description</span>
+          <textarea cols="30" rows="5" ng-model="witness.desc"></textarea>
+        </label>
+
+        <label class="item item-input item-select">
+          <span class="input-label"><span class="mandatory">* </span>Incident Type :</span>
+            <select ng-model="witness.type" required>
+              <option value="Assault" selected>Assault</option>
+              <option value="Homicide">Homicide</option>
+              <option value="Kidnapping">Kidnapping</option>
+              <option value="Robbery">Robbery</option>
+              <option value="Sexual_Offense">Sexual Offense</option>
+              <option value="Breaking_Entering">Breaking and Entering</option>
+              <option value="Theft">Theft</option>
+              <option value="Theft_Vehicle">Theft from Vehicle</option>
+              <option value="Drugs">Drugs</option>
+              <option value="Liquor">Liquor</option>
+              <option value="Others">Others</option>
+            </select>
+        </label>
+
+      </div>
+      <span class="mandatory">* </span><span>Please fill in the mandatory fields to proceed.</span>
+      <div class="editProBtn">
+        <button type="submit" class="button button-full button-balanced" ng-disabled="addWitnessForm.$invalid">Add Incident</button>
+      </div>
+
+    </form>
+  </ion-content>
+
+</ion-view>

@@ -1,0 +1,29 @@
+<ion-view title="SOS">
+
+  <ion-nav-bar class="bar-assertive" align-title="center">
+    <ion-nav-buttons side="left">
+      <button class="button button-clear icon ion-android-arrow-back backBtn" ui-sref="home"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right" >
+      <button class="button button-clear"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content class="has-header" scroll="false">
+    
+    <div class="sosText">
+      <span>Pressing this button will trigger an Emergency SOS text message.</span>
+    </div>
+    <div class="sosBtn">
+      <img src="img/sos.png" ng-click="confirmSMS()">
+    </div>
+    <div class="sosText">
+      <span>A copy of your Emergency SOS text message will be sent to your emergency contacts.</span>
+    </div>
+    <div class="rates">
+      <span class="mandatory">* </span><span>Standard Text Message Rates Applicable.</span>
+    </div>
+
+  </ion-content>
+  
+</ion-view>

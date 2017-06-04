@@ -1,0 +1,27 @@
+<ion-view title="Emergency Contact" cache-view="false">
+
+	<ion-nav-bar class="bar-dark">
+	  <ion-nav-buttons side="left">
+	    <button class="button button-clear icon ion-android-arrow-back backBtn" ui-sref="contact"></button>
+	  </ion-nav-buttons>
+	  <ion-nav-buttons side="right" >
+	    <button class="button button-clear" ng-click="modal.show()">Edit</button>
+	  </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content scroll="false">
+    
+    <div class="list list-inset">
+   		<div class="item item-divider">Name</div>
+   		<div class="item">{{ contact.name }}</div>
+   		<div class="item item-divider">Contact Number</div>
+   		<div class="item">{{ contact.hpnum }}</div>
+    </div>
+
+    <ion-footer-bar class="delContact">
+    	<button class="button button-full button-assertive" ng-click="deleteContact()">Delete Contact</button>
+    </ion-footer-bar>
+
+	</ion-content>
+	
+</ion-view>

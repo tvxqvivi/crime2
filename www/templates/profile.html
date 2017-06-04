@@ -1,0 +1,32 @@
+<ion-view title="Profile" cache-view="false">
+
+	<ion-nav-bar class="bar-dark" align-title="center">
+	  <ion-nav-buttons side="left">
+	    <button class="button button-clear icon ion-android-arrow-back backBtn" ui-sref="home"></button>
+	  </ion-nav-buttons>
+	  <ion-nav-buttons side="right" >
+	    <button class="button button-clear" ng-click="modalA.show()">Edit</button>
+	  </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content>
+    
+    <div class="list card profile">
+   		<div class="item profileIMG"><img ng-src="{{ result.img }}"></div>
+   		<div class="item">
+   			<button class="button button-block button-royal icon icon-left ion-camera" style="margin: 0 auto;" ui-sref="editprofileimage">
+   				Edit Profile Image
+   			</button>
+   			<p class="text-center"><span>Press this button to change profile picture</span></p>
+   		</div>
+   		<div class="item item-divider">Name</div><div class="item">{{ result.name }}</div>
+			<div class="item item-divider">Email</div><div class="item">{{ result.email }}</div>
+			<div class="item item-divider">IC Number</div><div class="item">{{ result.ic }}</div>
+			<div class="item item-divider">Gender</div><div class="item">{{ result.gender }}</div>
+			<div class="item item-divider">Address</div><div class="item">{{ result.address }}</div>
+			<div class="item item-divider">Handphone Number</div><div class="item">{{ result.hpnum }}</div>
+    </div>
+
+	</ion-content>
+	
+</ion-view>

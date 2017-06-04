@@ -1,0 +1,28 @@
+<ion-view title="Reminder Details" cache-view="false">
+
+	<ion-nav-bar class="bar-dark" align-title="center">
+	  <ion-nav-buttons side="left">
+	    <button class="button button-clear icon ion-android-arrow-back backBtn" ui-sref="reminder"></button>
+	  </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content scroll="false">
+    
+    <div class="list list-inset">
+   		<div class="item item-positive item-divider">Receiver</div>
+   		<div class="item">{{ reminder.receiver }}</div>
+   		<div class="item item-positive item-divider">Scheduled Date and Time</div>
+   		<div class="item">{{ reminder.reminderDT }}</div>
+      <div class="item item-positive item-divider">Message</div>
+      <div class="item">{{ reminder.message }}</div>
+      <div class="item item-positive item-divider">Status</div>
+      <div class="item">Pending</div>
+    </div>
+
+    <ion-footer-bar class="delContact">
+    	<button class="button button-full button-assertive" ng-click="deleteReminder()">Delete Reminder</button>
+    </ion-footer-bar>
+
+	</ion-content>
+	
+</ion-view>

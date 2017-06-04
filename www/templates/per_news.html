@@ -1,0 +1,30 @@
+<ion-view title="News" cache-view="false">
+
+	<ion-nav-bar class="bar-dark" align-title="center">
+	  <ion-nav-buttons side="left">
+	    <button class="button button-clear icon ion-android-arrow-back backBtn" ui-sref="news"></button>
+	  </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content>
+    
+    <div class="list card">
+      <div class="item">
+        <h2 class="fullTitle">{{ news.webTitle }}</h2>
+        <p>{{ news.fields.publication }}</p>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" src="{{ news.fields.thumbnail }}">
+        <p>{{ news.fields.bodyText }}</p>
+      </div>
+
+      <div class="item item-divider">Published Date</div>
+      <div class="item">{{ news.webPublicationDate | date:dd-MM-yyyy }}</div>
+   		<div class="item item-divider">Source</div>
+   		<div class="item"><a href="{{ news.webUrl }}">Click here to read more...</a></div>
+    </div>
+
+	</ion-content>
+	
+</ion-view>

@@ -1,0 +1,32 @@
+<ion-view title="Emergency Contacts" cache-view="false">
+
+	<ion-nav-bar class="bar-dark" align-title="center">
+	  <ion-nav-buttons side="left">
+	    <button class="button button-clear icon ion-android-arrow-back backBtn" ui-sref="home"></button>
+	  </ion-nav-buttons>
+	  <ion-nav-buttons side="right" >
+	    <button ng-disabled="max" class="button button-clear" ng-click="modal.show()">Add</button>
+	  </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content scroll="false">
+    
+    <div class="list list-inset">
+   		<a class="item center" ui-sref="perContact({id : contacts.id})" ng-repeat="contacts in contacts">
+   			<div class="row" style="margin: none;">
+   				<div class="col col-50" style="text-align: left;">
+	   				<h2>{{ contacts.name }}</h2>
+	   				<p>{{ contacts.hpnum }}</p>
+	   			</div>
+	   			<div class="col col-50 detailBtn">
+	   				<i class="icon ion-android-arrow-dropright-circle"></i>
+	   			</div>
+   			</div>
+   		</a>
+    </div>
+
+    <p class="limit" ng-show="limit"><span class="mandatory">* </span>You have reached the maximum number of emergency contacts</p>
+
+	</ion-content>
+	
+</ion-view>

@@ -1,0 +1,83 @@
+<ion-view>
+    
+    <ion-nav-bar class="bar-dark">
+        <ion-nav-title class="title">Main Menu</ion-nav-title>
+    </ion-nav-bar>
+    
+    <ion-content>
+
+      <div id="home" class="row">
+        <div class="col col-33 center" ui-sref="profile">
+          <button class="button icon ion-android-person"></button>
+        </div>
+        <div class="col col-33 center" ui-sref="contact">
+          <button class="button icon ion-android-contacts"></button>
+        </div>
+        <div class="col col-33 center" ui-sref="witness">
+          <button class="button icon ion-edit"></button>
+        </div>
+      </div>
+
+      <div id="iconLabel" class="row">
+        <div class="col col-33 center">
+          <span>Profile</span>
+        </div>
+        <div class="col col-33 center">
+          <span>Contacts</span>
+        </div>
+        <div class="col col-33 center">
+          <span>Report Incident</span>
+        </div>
+      </div>
+
+      <div id="home" class="row">
+        <div class="col col-33 center" ui-sref="mapping">
+          <button class="button icon ion-map"></button>
+        </div>
+        <div class="col col-33 center" ui-sref="sos">
+          <button class="button button-clear sos"></button>
+        </div>
+        <div class="col col-33 center" ui-sref="reminder">
+          <button class="button icon ion-bookmark"></button>
+        </div>
+      </div>
+
+      <div id="iconLabel" class="row">
+        <div class="col col-33 center">
+          <span>Crime Mapping</span>
+        </div>
+        <div class="col col-33 center">
+          <span>SOS</span>
+        </div>
+        <div class="col col-33 center">
+          <span>Reminder</span>
+        </div>
+      </div>
+
+      <div id="home" class="row">
+        <div class="col col-33 center" ui-sref="news">
+          <button class="button icon ion-ios-paper"></button>
+        </div>
+        <div class="col col-33 center" ui-sref="prevention">
+          <button class="button icon ion-android-hand"></button>
+        </div>
+        <div class="col col-33 center" ng-click="logout()">
+          <button class="button icon ion-android-exit"></button>
+        </div>
+      </div>
+
+      <div id="iconLabel" class="row">
+        <div class="col col-33 center">
+          <span>News</span>
+        </div>
+        <div class="col col-33 center">
+          <span>Prevention Tips</span>
+        </div>
+        <div class="col col-33 center">
+          <span>Log Out</span>
+        </div>
+      </div>
+
+    </ion-content>
+
+</ion-view>

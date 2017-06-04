@@ -1,0 +1,24 @@
+<ion-view title="Latest News" cache-view="false">
+
+	<ion-nav-bar class="bar-dark" align-title="center">
+	  <ion-nav-buttons side="left">
+	    <button class="button button-clear icon ion-android-arrow-back backBtn" ui-sref="home"></button>
+	  </ion-nav-buttons>
+	  <ion-nav-buttons side="right" >
+	    <button class="button button-clear"></button>
+	  </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content>
+
+    <div class="list">
+      <a class="item item-thumbnail-left" ui-sref="perNews({id : news.id})" collection-repeat="news in news">
+        <img src="{{ news.fields.thumbnail }}">
+        <h3 class="fullTitle">{{ news.webTitle }}</h3>
+        <p>{{ news.fields.publication }}</p>
+      </a>
+    </div>
+
+	</ion-content>
+	
+</ion-view>

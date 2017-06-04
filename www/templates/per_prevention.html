@@ -1,0 +1,40 @@
+<ion-view title="Prevention Tip" cache-view="false">
+
+	<ion-nav-bar class="bar-dark" align-title="center">
+	  <ion-nav-buttons side="left">
+	    <button class="button button-clear icon ion-android-arrow-back backBtn" ui-sref="prevention"></button>
+	  </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content>
+    
+    <div class="list card">
+   		<div class="item">
+        <h2>{{ tips.title }}</h2>
+        <p>{{ tips.date | date: dd/MM/yyyy}}</p>
+      </div>
+      <div ng-if="images[0] != null || images[1] != null || images[2] != null" class="item item-divider">Images</div>
+      <div ng-if="images[0] != null || images[1] != null || images[2] != null">
+        <ion-slide-box>
+          <ion-slide ng-repeat="image in images">
+            <img class="tipImg" src="{{ image }}">
+          </ion-slide>
+        </ion-slide-box>
+      </div>
+   		<div class="item item-body">
+        <h2>{{ tips.subtitle }}</h2>
+        <p>{{ tips.desc }}</p>
+      </div>
+      <div class="item item-divider">Author</div>
+      <div class="item">{{ tips.author }}</div>
+   		<div class="item item-divider">Source</div>
+      <div class="item"><a href="{{ tips.source }}">Click here to read more...</a></div>
+      <div ng-if="video[0] != null" class="item item-divider">Video</div>
+      <div ng-if="video[0] != null">
+        <iframe src="{{ trustSrc(iframe.src) }}" class="tipVid"></iframe>
+      </div>
+    </div>
+
+	</ion-content>
+	
+</ion-view>

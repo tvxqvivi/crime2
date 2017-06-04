@@ -1,0 +1,38 @@
+<ion-view id="titlePage" hide-nav-bar="true" hide-tabs>
+    <ion-content scroll="false">
+
+      <form name="login_form" ng-submit="login()">
+
+        <div class="card">
+
+          <div style="margin-bottom: 10%;">
+            <img id="image" src="img/logo.png" class="startImg">
+          </div>
+
+          <div ng-class="{true: 'error'}[submitted && login_form.email.$invalid]">
+            <div class="login-flex">
+              <div ng-show="show" style="color: red; padding: 2px; text-align:left;">*{{ msg }}</div>
+              <p ng-show="login_form.email.$error.email" class="mandatory">*Please follow the format "someone@example.com"</p>
+              <label class="item item-input emailInput">
+                <input type="email" placeholder="Email" ng-model="user.email" name="email" required/>
+              </label>
+              <label class="item item-input pwInput">
+                <input type="password" placeholder="Password" ng-model="user.password" required/>
+              </label>
+            </div>
+          </div>
+
+        </div>
+        
+        <div class="loginF">
+          <button type="submit" class="button button-positive login-button" ng-disabled="login_form.$invalid">Login</button>
+        </div>
+        <p id="signupnow" ui-sref="forgotpw">Forgot Password</p>
+        <p id="signupnow" ui-sref="signup">Sign Up Now</p>
+        
+      </form>
+
+  <p class="hide-on-keyboard-open version">v0.0.1</p>
+
+  </ion-content>
+</ion-view>

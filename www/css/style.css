@@ -1,0 +1,337 @@
+@font-face {
+    font-family: 'geomanist';
+    src: url('font/geomanist.ttf') format('truetype');
+}
+
+.title{
+  color: white !important;
+  text-align: center !important;
+}
+
+.backBtn{
+  color: white !important;
+  /*margin-left: 3px;*/
+  /*padding-right: 25px !important;*/
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mandatory{
+  color: red !important;
+}
+
+.error{
+  color: red !important;
+  padding-left: 5%;
+}
+
+/*title page*/
+#titlePage{
+  background-image: url('../img/background.gif') !important;
+  background-repeat:no-repeat !important;
+  background-size: cover;
+}
+
+.titleName{
+  color: white;
+  min-height: 70%;
+}
+
+.titleButton{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+/*login*/
+.login{
+  background-color: #F0F8FF;
+}
+
+.startImg{
+  width: 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+}
+
+.mainTitle{
+  font-family: 'geomanist';
+  text-align:center;
+  letter-spacing: 1px;
+  padding: 3%;
+  font-size: 1.5em !important;
+}
+
+.login-flex{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column; 
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loginF{
+  text-align: center;
+  margin-top: 5%;
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item-input.emailInput{
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 10px !important;
+  border: none !important;
+}
+
+.emailIcon{
+  font-size: x-large;
+}
+
+.pwInput{
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 10px !important;
+  border-top: 1px solid rgba(150, 149, 149, 0.62) !important;
+  margin-bottom: 5% !important;
+}
+
+.login-button{
+  width: 100%;
+  background-color: #009147 !important;
+  border-color: #009147 !important;
+}
+
+.version{
+  padding: 0px 0px 7px 13px;
+  margin: 0px; 
+  color: gray; 
+  bottom: 0%; 
+  position: absolute; 
+  font-size: 15px;
+}
+
+#signupnow{
+  padding-top: 5%;
+  color: #FFFAF0;
+  text-align:center;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+#loginnow{
+  padding-top: 1%;
+  color: #FFFAF0;
+  text-align:center;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/*sign up*/
+.signupBtnCon{
+  padding: 0 20px 0px 20px;
+}
+
+#signupBtn{
+  background-color: #009147;
+  color: #FFFAF0; 
+  border: none;
+}
+
+/*profile*/
+.profile div.item{
+  word-wrap: break-word;
+  white-space: initial;
+}
+
+.profileIMG img{
+  object-fit: cover;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+/*edit profile*/
+div.list.card.gender{
+  margin-left: 0%;
+  margin-bottom: 5%;
+  width: 96%;
+}
+
+.editImage{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.editProBtn{
+  margin: 0px auto 20px auto;
+  width: 95%;
+  display: block;
+}
+
+/*home*/
+#home.row, #iconLabel.row{
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+
+#home div.col {
+  padding: 0;
+  height: 100px;
+  border: 1px groove;
+  border-color: #F5F5F5;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+}
+
+#home div.col:first-child, #iconLabel div.col:first-child { border-left: none; }
+
+#home button.button.icon{
+  border-radius: 50%;
+  color: #000000;
+}
+
+#home button.button-clear.sos{
+  background-image: url('../img/sos.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height: 52%;
+}
+
+#iconLabel div.col {
+  padding: 0;
+  height: 25px;
+  border: 1px groove;
+  border-color: #F5F5F5;
+  border-right: none;
+  border-top: none;
+}
+
+/*emergency contacts*/
+.detailBtn{
+  text-align: right;
+  font-size: x-large;
+  position: relative;
+}
+
+.detailBtn i{
+  vertical-align: middle;
+}
+
+.limit{
+  margin: 15px;
+  font-weight: bold;
+}
+
+/*single contact*/
+.delContact{
+  border: 0;
+  background-position: bottom;
+}
+
+.delContact button{
+  margin: 0 !important;
+  font-size: large !important;
+}
+
+/*sos*/
+.sosText{
+  text-align: center;
+  font-size: 20px;
+  margin: 10% 5%;
+}
+
+.sosBtn, .rates{
+  text-align: center;
+}
+
+.rates span{
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/*prevention*/
+.tipImg{
+  width:300px;
+  height:300px;
+  margin:auto;
+  display:block;
+}
+
+.tipVid{
+  width: 100%;
+  height: 240px;
+}
+
+/*mapping*/
+.scroll{
+  height: 100%;
+}
+#map{
+  width: 100%;
+  height: 91%;
+}
+.infowindowH{
+  text-align: left;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+}
+.infowindowB{
+  text-align: left;
+  color: black;
+  font-size: 12px;
+  font-weight: 400;
+}
+#legend{
+  font-family: Arial, sans-serif;
+  background: #fff;
+  padding: 5px;
+  margin: 5px;
+  border: 2px solid #000;
+}
+#legend h3{
+  margin-top: 0;
+}
+#legend img{
+  vertical-align: middle;
+}
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+
+/*reminder*/
+.reminder{
+  padding: 1%;
+}
+
+/*news*/
+.fullTitle{
+  overflow: visible !important;
+  white-space: normal !important;
+}

@@ -1,0 +1,48 @@
+<ion-modal-view cache-view="false">
+
+  <ion-header-bar class="bar bar-header bar-dark" align-title="center">
+    <h1 class="title">Edit Profile</h1>
+    <button class="button button-clear button-primary" ng-click="modalA.hide()">Cancel</button>
+  </ion-header-bar>
+
+  <ion-content scroll="true">
+    <form name="editProfileForm" ng-submit="editProfile()">
+
+      <div class="list card">
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Name</span>
+          <input type="text" placeholder="{{ result.name }}" ng-model="editUser.name"/>
+        </label>
+
+    		<label class="item item-input item-stacked-label">
+      		<span class="input-label">Email</span>
+      		<input type="email" name="emailI" placeholder="{{ result.email }}" ng-model="editUser.email"/>
+    		</label>
+        <p class="error" ng-show="editProfileForm.emailI.$error.email">*Please follow the format "someone@example.com"</p>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">IC Number</span>
+          <input type="text" placeholder="{{ result.ic }}" ng-model="editUser.ic"/>
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Handphone Number</span>
+          <input type="text" placeholder="{{ result.hpnum }}" ng-model="editUser.hpnum"/>
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Address</span>
+          <input type="text" placeholder="{{ result.address }}" ng-model="editUser.address"/>
+        </label>
+
+      </div>
+
+      <div class="editProBtn">
+        <button type="submit" class="button button-full button-balanced">Save Profile</button>
+      </div>
+
+ 	  </form>
+	</ion-content>
+
+</ion-modal-view>

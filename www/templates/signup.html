@@ -1,0 +1,69 @@
+<ion-view id="titlePage" hide-nav-bar="true" hide-tabs>
+
+  <ion-content scroll="false">
+
+  <form name="signupForm" ng-submit="signup()">
+     <div class="list card">
+      
+      <p class="error" ng-bind-html="e" ng-show="e">{{e}}</p>
+
+      <label class="item item-input">
+        <i class="icon ion-ios-person placeholder-icon"></i>
+        <input type="text" placeholder="Enter Name Here" ng-model="user.name" required/>
+      </label>
+
+      <label class="item item-input">
+        <i class="icon ion-ios-email placeholder-icon"></i>
+        <input type="email" name="emailI" placeholder="Enter Email Here" ng-model="user.email" required/>
+      </label>
+      <p class="error center mandatory" ng-show="signupForm.emailI.$error.email">*Please follow the format "someone@example.com"</p>
+
+      <label class="item item-input">
+        <i class="icon ion-ios-locked placeholder-icon"></i>
+        <input type="password" placeholder="Enter Password Here" ng-model="user.pw" ng-minlength="8" ng-maxlength="16" id="pw1" name="pw1" required/>
+      </label>
+      <p class="error" ng-show="signupForm.$error.minlength || signupForm.$error.maxlength">*Please enter password min length of 8 and max length of 16</p>
+
+      <label class="item item-input">
+        <i class="icon ion-ios-locked placeholder-icon"></i>
+        <input type="password" name="pw2" placeholder="Re-enter Password Here" ng-model="user.confirmpw" pw-check="pw1" required/>
+      </label>
+      <p class="error" ng-show="signupForm.pw2.$error.pwmatch">*Confirm password does not match with password</p>
+
+      <label class="item item-input">
+        <i class="icon ion-ios-information placeholder-icon"></i>
+        <input type="text" placeholder="Enter IC Number Here" ng-model="user.ic" required/>
+      </label>
+
+      <label class="item item-input">
+        <i class="icon ion-ios-telephone placeholder-icon"></i>
+        <input type="text" placeholder="Enter Handphone Number Here" ng-model="user.hpnum" required/>
+      </label>
+
+      <label class="item item-input">
+        <i class="icon ion-ios-home placeholder-icon"></i>
+        <input type="text" placeholder="Enter Address Here" ng-model="user.address" required/>
+      </label>
+
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Gender : {{data.gender}}</span>
+        <div class="list card gender">
+          <ion-radio icon="icon ion-man" ng-value="'Male'" ng-model="data.gender">Male</ion-radio>
+          <ion-radio icon="icon ion-woman" ng-value="'Female'" ng-model="data.gender">Female</ion-radio>
+        </div>
+      </label>
+
+      <label class="item item-input item-stacked-label">
+        <span class="center mandatory input-label">* Please fill in all fields</span>
+      </label>
+
+    </div>
+
+    <div class="signupBtnCon">
+      <button class="button button-block button-balanced" id="signupBtn" ng-disabled="signupForm.$invalid">Sign Up</button>
+    </div>
+    <p id="loginnow" ui-sref="login">Login Now</p>
+  </form>
+      
+  </ion-content>
+</ion-view>

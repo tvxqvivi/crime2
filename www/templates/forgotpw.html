@@ -1,0 +1,37 @@
+<ion-view hide-nav-bar="true" hide-tabs>
+
+  <ion-content scroll="false">
+  <h3 class="center" style="margin-top: 50%">Reset password</h3>
+  <p class="center"><span class="mandatory">*&nbsp;</span>Please enter the correct email for CAS Mobile Application</p>
+  <form name="forgotpwForm" ng-submit="forgotpw()">
+    <p class="error" ng-bind-html="e" ng-show="e">*{{e}}</p>
+    <div class="list card">
+      
+      <label class="item item-input">
+        <i class="icon ion-ios-email placeholder-icon"></i>
+        <input type="email" name="emailI" placeholder="Enter Email Here" ng-model="user.email" required/>
+      </label>
+      <p class="error center mandatory" ng-show="forgotpwForm.emailI.$error.email">*Please follow the format "someone@example.com"</p>
+
+      <label class="item item-input">
+        <i class="icon ion-ios-locked placeholder-icon"></i>
+        <input type="password" placeholder="Enter New Password Here" ng-model="user.pw" ng-minlength="8" ng-maxlength="16" id="pw1" name="pw1" required/>
+      </label>
+      <p class="error" ng-show="forgotpwForm.$error.minlength || forgotpwForm.$error.maxlength">*Please enter password min length of 8 and max length of 16</p>
+
+      <label class="item item-input">
+        <i class="icon ion-ios-locked placeholder-icon"></i>
+        <input type="password" name="pw2" placeholder="Re-enter New Password Here" ng-model="user.confirmpw" pw-check="pw1" required/>
+      </label>
+      <p class="error" ng-show="forgotpwForm.pw2.$error.pwmatch">*Confirm password does not match with password</p>
+
+    </div>
+
+    <div class="signupBtnCon">
+      <button class="button button-block button-balanced" id="signupBtn" ng-disabled="forgotpwForm.$invalid">Submit</button>
+    </div>
+    <p id="loginnow" ui-sref="login" style="color: black;">Login Now</p>
+  </form>
+      
+  </ion-content>
+</ion-view>

@@ -1,0 +1,22 @@
+<ion-view title="Crime Mapping">
+	
+	<ion-nav-bar class="bar-dark" align-title="center">
+	  <ion-nav-buttons side="left">
+	    <button class="button button-clear icon ion-android-arrow-back backBtn" ui-sref="home"></button>
+	  </ion-nav-buttons>
+  </ion-nav-bar>
+	<!-- <ion-content class="has-header"> -->
+		<ion-tabs class="tabs-striped tabs-top tabs-background-stable tabs-color-dark">
+			<ion-tab title="Latest Results" ui-sref="mapping.latestMap">
+					<!-- <ion-content class="has-header"> -->
+						<ion-nav-view name="latestMap"></ion-nav-view>
+					<!-- </ion-content> -->
+			</ion-tab>
+			<ion-tab title="All Results" ui-sref="mapping.allMap">
+					<!-- <ion-content class="has-header"> -->
+						<ion-nav-view name="allMap"></ion-nav-view>
+					<!-- </ion-content> -->
+			</ion-tab>
+		</ion-tabs>
+	<!-- </ion-content> -->
+</ion-view>
